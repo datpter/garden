@@ -1,0 +1,217 @@
+<!--<section  class="section-head">-->
+<!--  <div class="box">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="row">-->
+<!--      <div class="col-2">-->
+<!--        <div class="site-logo">-->
+<!--          <a href=""><img src="https://102techwiz.azurewebsites.net/clients_assets/images/logo4.png"></a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-8 center-head ">-->
+<!--        <div class="ltn_main-menu">-->
+<!--          <ul class="nav">-->
+<!--            <li class="menu-icon">-->
+<!--              <a [routerLink]="['/']">HOME</a>-->
+
+<!--            </li>-->
+<!--            <li class="menu-icon" >-->
+<!--              <a routerLink="/about">ABOUT US</a>-->
+<!--            </li>-->
+<!--            <li class="menu-icon">-->
+<!--              <a routerLink="/shop">SHOP</a>-->
+<!--                    <ul>-->
+<!--                      <li>-->
+<!--                        <a href="">Flowering</a>-->
+<!--                      </li>-->
+<!--                      <li><a href="">Non-flowering</a></li>-->
+<!--                      <li><a href="">Indoors</a></li>-->
+<!--                      <li><a href="">Outdoors</a></li>-->
+<!--                      <li><a href="">Succulents</a></li>-->
+<!--                      <li><a href="">Medicinal</a></li>-->
+<!--                      <li><a href="">aaaaaaaa</a></li>-->
+<!--                    </ul>-->
+<!--            </li>-->
+<!--            <li class="menu-icon">-->
+<!--              <a routerLink="/contact">CONTACT US</a>-->
+<!--            </li>-->
+<!--            <li class="menu-icon">-->
+<!--              <a *ngIf="!role" class="login" routerLink="/login"  (click)="toggleHeader()">LOGIN</a>-->
+<!--              <a *ngIf="role=='User'" routerLink="/login">WISHLIST</a>-->
+<!--            </li>-->
+<!--            <li class="menu-icon">-->
+<!--              <a *ngIf="role=='User'"  routerLink="/cart">CART</a>-->
+<!--              <a *ngIf="!role"  href="/register">CREATE ACCOUNT</a>-->
+<!--            </li>-->
+
+<!--          </ul>-->
+<!--        </div>-->
+
+
+<!--      </div>-->
+<!--      <div class="col-2 center-head">-->
+<!--        <ul class="nav">-->
+<!--          <li>-->
+<!--              <button (click)="toggleSearchBar()">-->
+<!--                <i class="bi bi-search"></i>&lt;!&ndash; Icon của bạn ở đây &ndash;&gt;-->
+
+<!--                <div class="icon-and-search-container">-->
+<!--                  <div  *ngIf="isSearchBarVisible" class="search-bar" (click)="preventClose($event)" >-->
+<!--                   <div class="header-search-1-form">-->
+<!--                    <form>-->
+<!--                      <input class="input-header" type="text" placeholder="Tìm kiếm...">-->
+<!--                    </form>-->
+<!--                   </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </button>-->
+<!--          </li>-->
+<!--          <li><a href=""><i class="bi bi-person"></i></a>-->
+<!--          <ul>-->
+<!--            <li>-->
+<!--              <a *ngIf="role === 'User'" (click)="logout()">Log Out</a>-->
+<!--              <a *ngIf="!role" routerLink="/login">Sign in</a>-->
+<!--            </li>-->
+<!--            <li><a *ngIf="role=== 'User'"routerLink="/account">My Account</a></li>-->
+<!--            <li><a routerLink="/product">Registera</a></li>-->
+
+<!--          </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a *ngIf="role==='User'"><i class="bi bi-bag"></i></a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</section>-->
+<router-outlet></router-outlet>
+<!--<footer   class=" section plr&#45;&#45;5">-->
+<!--  <div class="footer-top-area section-bg-5">-->
+<!--    <div class="container">-->
+<!--      <div class="row footer-end1">-->
+<!--        <div class="col-2">-->
+<!--          <div class="footer-widget">-->
+<!--            <h4 class="footer-title">MY ACCOOUT</h4>-->
+<!--            <div class="footer-menu">-->
+<!--              <ul>-->
+<!--                <li><a href="">My account</a></li>-->
+<!--                <li><a href="">Checkout</a></li>-->
+<!--                <li><a href="">Contact us</a></li>-->
+<!--                <li><a href="">Shopping Cart</a></li>-->
+<!--                <li><a href="">Wishlist</a></li>-->
+
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-2">-->
+<!--          <div class="footer-widget">-->
+<!--            <h4 class="footer-title">QUICK LINKS</h4>-->
+<!--            <div class="footer-menu">-->
+<!--              <ul>-->
+<!--                <li><a href="">Store Location</a></li>-->
+<!--                <li><a href="">Orders Tracking</a></li>-->
+<!--                <li><a href="">Size Guide</a></li>-->
+<!--                <li><a href="">My account</a></li>-->
+<!--                <li><a href="">FAQs</a></li>-->
+
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-2">-->
+<!--          <div class="footer-widget">-->
+<!--            <h4 class="footer-title">INFORMATION</h4>-->
+<!--            <div class="footer-menu">-->
+<!--              <ul>-->
+<!--                <li><a href="">Privacy Page</a></li>-->
+<!--                <li><a href="">About us</a></li>-->
+<!--                <li><a href="">Careers</a></li>-->
+<!--                <li><a href="">Delivery Inforamtion</a></li>-->
+<!--                <li><a href="">Term & Conditions</a></li>-->
+
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-2">-->
+<!--          <div class="footer-widget">-->
+<!--            <h4 class="footer-title">CUSTOMER SERVICE</h4>-->
+<!--            <div class="footer-menu">-->
+<!--              <ul>-->
+<!--                <li><a href="">Shipping Policy</a></li>-->
+<!--                <li><a href="">Help & Contact Us</a></li>-->
+<!--                <li><a href="">Returns & Refunds</a></li>-->
+<!--                <li><a href="">Online Stores</a></li>-->
+<!--                <li><a href="">Terms and Conditions</a></li>-->
+
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-4">-->
+<!--          <div class="footer-widget">-->
+<!--            <h4 class="footer-title">ABOUT OUR SHOP</h4>-->
+<!--            <p class="contact">Keep up with our latest news. If you need our help please contact with the following info</p>-->
+<!--            <div class="footer-address">-->
+<!--              <ul>-->
+<!--            <li>-->
+<!--              <div class="footer-address-icon">-->
+<!--                <i class="bi bi-geo-alt"></i>-->
+<!--              </div>-->
+<!--              <div class="footer-address-info">-->
+<!--                <p>Ha Noi,Viet Nam</p>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <div class="footer-address-icon">-->
+<!--                <i class="bi bi-telephone"></i>-->
+<!--              </div>-->
+<!--              <div class="footer-address-info2">-->
+<!--                <a href=""><p>+988146552</p></a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <div class="footer-address-icon">-->
+<!--                <i class="bi bi-envelope"></i>-->
+<!--              </div>-->
+<!--              <div class="footer-address-info2">-->
+<!--                <a href=""><p>Garden102@gmail.com</p></a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="footer-payment-img">-->
+<!--              <img src="../assets/img/payment-6.png" alt="">-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="footer-end">-->
+<!--        <div class="row">-->
+<!--          <div class="col-6">-->
+<!--           <div class="ltn_copyright-design">-->
+<!--             <p> 102 TEAM   © <span>2023</span>  - JUST FOR YOU </p>-->
+<!--           </div>-->
+<!--          </div>-->
+<!--          <div class="col-6">-->
+<!--            <div class="ltn_copyright-menu">-->
+<!--              <ul>-->
+<!--                <li><a href=""><i class="bi bi-facebook"></i></a></li>-->
+<!--                <li><a href=""><i class="bi bi-twitter"></i></a></li>-->
+<!--                <li><a href=""><i class="bi bi-pinterest"></i></a></li>-->
+<!--                <li><a href=""><i class="bi bi-instagram"></i></a></li>-->
+
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</footer>-->

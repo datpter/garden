@@ -1,0 +1,297 @@
+
+.box{
+  padding-top: 9px;
+}
+.section-head {
+  float: left;
+  width: 100%;
+  background-color: #fdfdfd;
+}
+.site-logo{
+  text-align: left;
+}
+.site-logo img{
+  max-width: 120px;
+}
+.ltn_main-menu ul{
+
+
+}
+.ltn_main-menu .menu-icon{
+  padding-right: 25px;
+
+}
+.center-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.nav .menu-icon{
+  padding-right: 40px;
+  position: relative;
+}
+.search-bar {
+  /* CSS cho thanh tìm kiếm */
+  display: block; /* hoặc inline-block tùy thuộc vào yêu cầu */
+  position: relative; /* Đảm bảo thanh tìm kiếm được đặt đúng vị trí */
+  /* Các thuộc tính khác tùy thuộc vào thiết kế của bạn */
+}
+.ltn_main-menu .nav .menu-icon a{
+  font-size: 14px;
+  font-weight: 700;
+  color: #666666;
+  padding-bottom: 90px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+.ltn_main-menu .nav .menu-icon a:hover{
+  color:#E55472;
+}
+.nav .bi-search{
+  padding-right: 23px;
+  font-size: 20px;
+
+}
+
+.nav .bi-bag{
+  font-size: 22px;
+  color: #010101;
+}
+
+.nav .bi-person{
+  font-size: 27px;
+  padding-right: 23px;
+}
+.section-head ul.nav> .menu-icon{
+  position: relative;
+}
+.section-head ul.nav> .menu-icon>ul {
+  position: absolute;
+  padding: 0px;
+  top: 45px;
+  width: 216px;
+
+  display: none;
+  border-top: 2px solid #e55472;
+  background-color: #fff;
+
+}
+.section-head ul.nav>li:hover>ul{
+  display: block;
+}
+.section-head ul.nav>li>ul>li>a:hover{
+ color: #E55472;
+}
+.section-head ul.nav> .menu-icon>ul>li{
+  line-height: 1.3;
+  padding: 20px 25px 12px 30px;
+  font-size: 14px;
+  text-align: left;
+
+}
+
+
+
+
+.section-head ul.nav>li{
+  position: relative;
+}
+.section-head ul.nav>li:hover>ul{
+  display: block;
+  color: #E55472;
+}
+.section-head ul.nav>li>ul{
+  position: absolute;
+  padding: 0px;
+  min-width: 150px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 999;
+  border-top: 1px solid #ececec;
+  transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;
+  display: none;
+
+}
+.section-head ul.nav>li>ul>li {
+
+  font-size: 14px;
+  text-align: left;
+  padding: 14px 25px 12px 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+}
+/*//footer*/
+
+.section-bg-5{
+  background-color: #272829;
+  padding: 60px 60px 5px 60px;
+}
+
+.footer-widget{
+  text-align: left;
+}
+
+
+.footer-widget .footer-title{
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+.footer-menu ul li{
+  padding-bottom: 15px;
+  position: relative;
+  font-size: 14px;
+
+}
+.footer-menu li a{
+  color:#999999 ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.footer-menu ul li a{
+  position: relative;
+}
+.footer-widget .contact{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding-bottom: 15px;
+
+}
+.footer-address li{
+  display: flex;
+}
+.footer-address ul li .footer-address-info p{
+  color:#999999 ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;padding-left: 21px;
+
+}
+.footer-address ul li .footer-address-info2 p{
+  color:#999999 ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;padding-left:
+  21px;
+
+}
+.footer-address ul li .footer-address-info2 p:hover{
+  color: #E55472;
+}
+.footer-end{
+  border-top: 1px solid #3b3c3d;
+}
+
+.footer-end1{
+  /*padding-bottom: 52px;*/
+}
+.ltn_copyright-design p{
+  text-align: left;
+  padding-top: 25px;
+ font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+ color:#999999 ;
+  font-size: 13px;
+  padding-left: 19px;
+
+
+}
+.ltn_copyright-menu ul{
+  display: flex;
+ padding-top: 25px;
+}
+.ltn_copyright-menu ul li{
+ padding-right: 18px;
+  font-size: 11px;
+}
+.ltn_copyright-menu ul li a:hover{
+ color: #E55472;
+
+}
+.ltn_copyright-menu a {
+  color: #999999;
+}
+
+/* app.component.css */
+.icon-and-search-container {
+  position: relative;
+}
+
+.search-bar {
+  /* CSS cho thanh tìm kiếm */
+  display: block;
+  position: absolute;
+  top: 100%; /* Đặt vị trí ở dưới icon */
+right: 0;
+  margin-top: 10px;
+  /* Các thuộc tính khác tùy thuộc vào thiết kế của bạn */
+}
+.nav li button{
+  border: none;
+  background: #fdfdfd;
+}
+.input-header{
+  position: relative;
+}
+.box-icon{
+  position: absolute;
+  top: 2px;
+  right: 5px;
+
+}
+.bi bi-search{
+  position: relative;
+}
+.ng-untouched ng-pristine ng-valid{
+  position: absolute;
+
+}
+.ng-untouched input{
+
+  z-index: 100;
+
+  margin-top: 14px;
+  height: 64px;
+  width: 278px;
+  padding-left: 12px;
+  border: none;
+  /* outline: 1px black; */
+
+  background-color: #f7f7f7;
+  font-size: 14px;
+}
+
+.header-search-1-form{
+  margin-right: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 130%;
+  transition-property: height;
+  width: 314px;
+  z-index: 9999;
+  box-shadow: 0 6px 17px 0 rgba(32, 33, 36, .28);
+  background-color: #fff;
+  height: 90px;
+}
+
+
+.ng-untouched input:focus{
+  border: 1px solid #E55472; /* Màu và độ dày đường viền khi focus */
+  outline: none; /* Loại bỏ viền mặc định khi focus */
+ }
+

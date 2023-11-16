@@ -1,0 +1,610 @@
+<app-nav></app-nav>
+<section class="section pb-5">
+  <div class="container-fluid">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="img-header">
+          <img src="../../assets/img/slider3.jpg" class="slider-img" alt="...">
+          </div>
+          <div class="ltn__slide-item-inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="banner-header">
+                    <h6 class="slide-sub-title  slide-title-line-2">
+                      Flower & Gift
+                    </h6>
+                    <h1 class="slide-title">Get Up To 75%</h1>
+                    <div class="slide-brief">
+                      <p>Thank you for your visit.</p>
+                    </div>
+                    <div class="btn-wrapper">
+                      <a class="button" href="">Shop Now</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <div class="img-header">
+          <img src="../../assets/img/slider1.jpg" class="slider-img" alt="...">
+          </div>
+          <div class="ltn__slide-item-inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="banner-header">
+                    <h6 class="slide-sub-title  slide-title-line-2">
+                      Flower & Gift
+                    </h6>
+                    <h1 class="slide-title">Get Up To 75%</h1>
+                    <div class="slide-brief">
+                      <p>Happiness is the seed Happiness shared is the flower
+                        .</p>
+                    </div>
+                    <div class="btn-wrapper">
+                      <a class="button" href="">Shop Now</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+
+</section>
+<div class="ltn__banner-area">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-3 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner1.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="col-3 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner2.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="col-3 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner3.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="col-3 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner4.jpg" alt=""></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--courousel-->
+<div class="ltn__product-tab-area ltn__product-gutter  pt-65 pb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="ltn__tab-menu">
+          <div class="nav-menu">
+            <a class="active" href="">NEW ARRIVAL</a>
+            <a href=""> TOP SALES</a>
+            <a  href=""> OFF SALES</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="tab-conten">
+
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide *ngFor="let p of products">
+            <div class="ltn__product-item">
+            <div class="product-img">
+              <a href="">
+                <a href=""><img [src]="imageUrl+p.image"></a>
+              </a>
+
+
+
+              <div class="product-badge">
+                <ul>
+                  <li class="badge-1">Hot</li>
+                </ul>
+              </div>
+              <div class="product-hover-action">
+                <ul>
+                  <li><a href=""><i class="bi bi-search"></i></a></li>
+                  <li><a href=""><i class="bi bi-handbag"></i></a></li>
+                  <li><a href=""><i class="bi bi-shuffle"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="produc-intro">
+              <div class="product-ratting">
+                <ul>
+                  <li><a href=""><i class="bi bi-star"></i></a></li>
+                  <li><a href=""><i class="bi bi-star"></i></a></li>
+                  <li><a href=""><i class="bi bi-star"></i></a></li>
+                  <li><a href=""><i class="bi bi-star"></i></a></li>
+                  <li><a href=""><i class="bi bi-star"></i></a></li>
+                </ul>
+                <h2 class="product-title">
+                  <a href="">{{p.name}}</a>
+                </h2>
+                <div class="product-price">
+                  <span>${{p.price}}</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </ng-template>
+<!--          <ng-template carouselSlide>-->
+<!--            <div class="ltn__product-item">-->
+<!--            <div class="product-img">-->
+<!--              <a href="">-->
+<!--                <img src="assets/img/product10.png" alt="">-->
+<!--              </a>-->
+
+
+<!--              <div class="product-badge">-->
+<!--                <ul>-->
+<!--                  <li class="badge-2">10%</li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="product-hover-action">-->
+<!--                <ul>-->
+<!--                  <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+
+<!--            </div>-->
+<!--              <div class="produc-intro">-->
+<!--                <div class="product-ratting">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  </ul>-->
+<!--                  <h2 class="product-title">-->
+<!--                    <a href="">Premium Joyful</a>-->
+<!--                  </h2>-->
+<!--                  <div class="product-price">-->
+<!--                    <span>$18.00</span>-->
+
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--          </div>-->
+<!--          </ng-template>-->
+<!--          <ng-template carouselSlide>-->
+<!--            <div class="ltn__product-item">-->
+<!--            <div class="product-img">-->
+<!--              <a href="">-->
+<!--                <img src="assets/img/product12.png" alt="">-->
+<!--              </a>-->
+<!--              <div class="product-badge">-->
+<!--                <ul>-->
+<!--                  <li class="badge-1">Hot</li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="product-hover-action">-->
+<!--                <ul>-->
+<!--                  <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+
+
+<!--            </div>-->
+<!--              <div class="produc-intro">-->
+<!--                <div class="product-ratting">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  </ul>-->
+<!--                  <h2 class="product-title">-->
+<!--                    <a href="">Pink Flower Tree</a>-->
+<!--                  </h2>-->
+<!--                  <div class="product-price">-->
+<!--                    <span>$18.00</span>-->
+<!--                    <del>$21.00</del>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--          </div>-->
+<!--          </ng-template>-->
+<!--          <ng-template carouselSlide>-->
+<!--            <div class="ltn__product-item">-->
+<!--            <div class="product-img">-->
+<!--              <a href="">-->
+<!--                <img src="assets/img/product6.png" alt="">-->
+<!--              </a>-->
+<!--              <div class="product-badge">-->
+<!--                <ul>-->
+<!--                  <li class="badge-1">10%</li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="product-hover-action">-->
+<!--                <ul>-->
+<!--                  <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="produc-intro">-->
+<!--              <div class="product-ratting">-->
+<!--                <ul>-->
+<!--                  <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                </ul>-->
+<!--                <h2 class="product-title">-->
+<!--                  <a href="">Pink Flower Tree</a>-->
+<!--                </h2>-->
+<!--                <div class="product-price">-->
+<!--                  <span>$18.00</span>-->
+<!--                  <del>$21.00</del>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div></ng-template>-->
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-e4 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner8.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="col-6 banner-img">
+        <div class="ltn__banner-img">
+          <a href=""><img src="assets/img/banner9.jpg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-e5">
+  <div class="container">
+    <div class="row">
+      <div class="ltn__product-gutter">
+        <div class="top-product section-title-border">
+          <h1>top products</h1>
+        </div>
+        <div class="tab-conten">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide  *ngFor="let p of top">
+              <div class="ltn__product-item">
+                <div class="product-img">
+                  <a href="">
+                    <img [src]="imageUrl+p.image">
+                  </a>
+                  <div class="product-badge">
+                    <ul>
+                      <li class="badge-1">Hot</li>
+                    </ul>
+                  </div>
+                  <div class="product-hover-action">
+                    <ul>
+                      <li><a href=""><i class="bi bi-search"></i></a></li>
+                      <li><a href=""><i class="bi bi-handbag"></i></a></li>
+                      <li><a href=""><i class="bi bi-shuffle"></i></a></li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div class="produc-intro">
+                  <div class="product-ratting">
+                    <ul>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                    </ul>
+                    <h2 class="product-title">
+                      <a href="">{{p.name}}</a>
+                    </h2>
+                    <div class="product-price">
+                      <span>${{p.price}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+<!--            <ng-template carouselSlide>-->
+<!--              <div class="ltn__product-item">-->
+<!--              <div class="product-img">-->
+<!--                <a href="">-->
+<!--                  <img src="assets/img/product10.png" alt="">-->
+<!--                </a>-->
+<!--                <div class="product-badge">-->
+<!--                  <ul>-->
+<!--                    <li class="badge-1">Hot</li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--                <div class="product-hover-action">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                  </ul>-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+<!--                <div class="produc-intro">-->
+<!--                  <div class="product-ratting">-->
+<!--                    <ul>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    </ul>-->
+<!--                    <h2 class="product-title">-->
+<!--                      <a href="">Pink Flower Tree</a>-->
+<!--                    </h2>-->
+<!--                    <div class="product-price">-->
+<!--                      <span>$18.00</span>-->
+<!--                      <del>$21.00</del>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </ng-template>-->
+<!--            <ng-template carouselSlide>-->
+<!--              <div class="ltn__product-item">-->
+<!--              <div class="product-img">-->
+<!--                <a href="">-->
+<!--                  <img src="assets/img/product12.png" alt="">-->
+<!--                </a>-->
+<!--                <div class="product-badge">-->
+<!--                  <ul>-->
+<!--                    <li badge-1>Hot</li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--                <div class="product-hover-action">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                  </ul>-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+<!--                <div class="produc-intro">-->
+<!--                  <div class="product-ratting">-->
+<!--                    <ul>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    </ul>-->
+<!--                    <h2 class="product-title">-->
+<!--                      <a href="">Pink Flower Tree</a>-->
+<!--                    </h2>-->
+<!--                    <div class="product-price">-->
+<!--                      <span>$18.00</span>-->
+<!--                      <del>$21.00</del>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </ng-template>-->
+<!--            <ng-template carouselSlide>-->
+<!--              <div class="ltn__product-item">-->
+<!--              <div class="product-img">-->
+<!--                <a href="">-->
+<!--                  <img src="assets/img/product6.png" alt="">-->
+<!--                </a>-->
+<!--                <div class="product-badge">-->
+<!--                  <ul>-->
+<!--                    <li class="badge-2">Hot</li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--                <div class="product-hover-action">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+<!--                  </ul>-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+<!--              <div class="produc-intro">-->
+<!--                <div class="product-ratting">-->
+<!--                  <ul>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                  </ul>-->
+<!--                  <h2 class="product-title">-->
+<!--                    <a href="">Pink Flower Tree</a>-->
+<!--                  </h2>-->
+<!--                  <div class="product-price">-->
+<!--                    <span>$18.00</span>-->
+<!--                    <del>$21.00</del>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            </ng-template>-->
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-e6">
+  <div class="container">
+    <div class="box-solit">
+    <div class="row">
+
+      <div class="col-3">
+        <div class="ltn__feature-item">
+          <div class="ltn__feature-icon">
+            <img src="assets/img/8-trolley.svg" alt="">
+          </div>
+          <div class="ltn__feature-info">
+            <h4>Free shipping</h4>
+            <p>On all orders over $49.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="ltn__feature-item">
+          <div class="ltn__feature-icon">
+            <img src="assets/img/9-money.svg" alt="">
+          </div>
+          <div class="ltn__feature-info">
+            <h4>15 days returns</h4>
+            <p>Moneyback guarantee</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="ltn__feature-item">
+          <div class="ltn__feature-icon">
+            <img src="assets/img/10-credit-card.svg" alt="">
+          </div>
+          <div class="ltn__feature-info">
+            <h4>Secure checkout</h4>
+            <p>Protected by Paypal</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="ltn__feature-item">
+          <div class="ltn__feature-icon">
+            <img src="assets/img/11-gift-card.svg" alt="">
+          </div>
+          <div class="ltn__feature-info">
+            <h4>Offer & gift here</h4>
+            <p>On all orders over</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+<section class="section-e7">
+  <div class="container-fluid">
+    <div class="wp-slider">
+
+
+    <owl-carousel-o [options]="customOptions2">
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo1.png" alt="">
+          </div>
+        </div>
+       </ng-template>
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo2.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo3.png" alt="">
+          </div>
+        </div>
+
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo4.png" alt="">
+          </div>
+        </div>
+
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo5.png" alt="">
+          </div>
+        </div>
+
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slick-cloned">
+          <div class="item">
+            <img src="assets/img/brand-logo1.png" alt="">
+          </div>
+        </div>
+      </ng-template>
+
+    </owl-carousel-o>
+
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>
+
+
+
+
+
+
+

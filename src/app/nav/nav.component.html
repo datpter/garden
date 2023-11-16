@@ -1,0 +1,87 @@
+<section  class="section-head">
+  <div class="box">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <div class="site-logo">
+            <a href=""><img src="https://102techwiz.azurewebsites.net/clients_assets/images/logo4.png"></a>
+          </div>
+        </div>
+        <div class="col-8 center-head ">
+          <div class="ltn_main-menu">
+            <ul class="nav">
+              <li class="menu-icon">
+                <a [routerLink]="['/']">HOME</a>
+
+              </li>
+              <li class="menu-icon" >
+                <a routerLink="/about">ABOUT US</a>
+              </li>
+              <li class="menu-icon">
+                <a routerLink="/shop">SHOP</a>
+                <ul>
+                  <li>
+                    <a href="">Flowering</a>
+                  </li>
+                  <li><a href="">Non-flowering</a></li>
+                  <li><a href="">Indoors</a></li>
+                  <li><a href="">Outdoors</a></li>
+                  <li><a href="">Succulents</a></li>
+                  <li><a href="">Medicinal</a></li>
+                  <li><a href="">aaaaaaaa</a></li>
+                </ul>
+              </li>
+              <li class="menu-icon">
+                <a routerLink="/contact">CONTACT US</a>
+              </li>
+              <li class="menu-icon">
+                <a *ngIf="!role" class="login" routerLink="/login"  (click)="toggleHeader()">LOGIN</a>
+                <a *ngIf="role=='User'" routerLink="/login">WISHLIST</a>
+              </li>
+              <li class="menu-icon">
+                <a *ngIf="role=='User'"  routerLink="/cart">CART</a>
+                <a *ngIf="!role"  href="/register">CREATE ACCOUNT</a>
+              </li>
+
+            </ul>
+          </div>
+
+
+        </div>
+        <div class="col-2 center-head">
+          <ul class="nav">
+            <li>
+              <button (click)="toggleSearchBar()">
+                <i class="bi bi-search"></i><!-- Icon của bạn ở đây -->
+
+                <div class="icon-and-search-container">
+                  <div  *ngIf="isSearchBarVisible" class="search-bar" (click)="preventClose($event)" >
+                    <div class="header-search-1-form">
+                      <form>
+                        <input class="input-header" type="text" placeholder="Tìm kiếm...">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li><a href=""><i class="bi bi-person"></i></a>
+              <ul>
+                <li>
+                  <a *ngIf="role === 'User'" (click)="logout()">Log Out</a>
+                  <a *ngIf="!role" routerLink="/login">Sign in</a>
+                </li>
+                <li><a *ngIf="role=== 'User'"routerLink="/account">My Account</a></li>
+                <li><a routerLink="/product">Registera</a></li>
+
+              </ul>
+            </li>
+            <li>
+              <a *ngIf="role==='User'"><i class="bi bi-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

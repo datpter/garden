@@ -1,0 +1,52 @@
+
+<section class="section-e7">
+  <div class="container">
+    <div class="Sign-In">
+      <h1>Sign In
+        <br>
+        To Your Account
+      </h1>
+
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="account-login-inner">
+            <form class="account-sigin-inner" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <small *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')" class="text-danger">*Username is required*</small>
+              <input id="username" formControlName="username" type="text" [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required','username')" name="username" placeholder="Username*:" fdprocessedid="d3zdrl ">
+              <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger">*Password is required*</small>
+              <input id="password" formControlName="password" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" type="password" name="password" placeholder=" Password*:" fdprocessedid="d3zdrl">
+              <div class="text-left">
+                <div class="button">
+                  <button class="button-login" type="submit" fdprocessedid="9af036">SIGN IN</button>
+                </div>
+                <div class="FORGOTTEN-YOUR-PASSWORD">
+                  <a href="">  <small>FORGOTTEN YOUR PASSWORD?</small></a>
+
+                </div>
+              </div>
+            </form>
+
+
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="box-create">
+        <div class="account-create ">
+          <h4>DON'T HAVE AN ACCOUNT?</h4>
+          <p>Add items to your wishlistget personalised recommendations
+            <br>
+            check out more quickly track your orders register
+          </p>
+        </div>
+        <div class="CREATE-ACCOUNT">
+          <a routerLink="/register"><button class="btn-block" type="submit" fdprocessedid="4mtp3x">CREATE ACCOUNT</button></a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+

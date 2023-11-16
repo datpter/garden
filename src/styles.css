@@ -1,0 +1,82 @@
+@import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,500;0,600;1,400&family=Lato:wght@300;400;700&family=Montserrat:wght@200&family=Noto+Sans+Syloti+Nagri&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-fluid{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+body{
+  font-family: 'Exo', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans Syloti Nagri', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #868686;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:focus{
+  color: #19cbe4;
+}
+p{
+  margin-bottom: 0px;
+}
+ul{
+  padding: 0px;
+}
+li{
+  list-style: none;
+
+}
+img{
+  max-width: 100%;
+}
+
+.section{
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+
+.slick-cloned .item >img{
+  max-width: 103px !important;
+  min-height: 95px;
+}
+.wp-slider{
+  padding: 27px 0px 27px 0px;
+  background-color: #f9f9f9;
+
+}
+
+.a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,530 @@
+<section class="section-product">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+     <div class="conten-product">
+       <h1>Products</h1>
+       <div class="home-product">
+       <span><a href="">Home</a></span>
+         <span>
+           >
+         </span>
+         <span>Products</span>
+       </div>
+     </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-details-product">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="ltn__shop-details-inner">
+          <div class="row">
+            <div class="col-6">
+              <div class="ltn__shop-details-img-gallery">
+                <div class="ltn__shop-details-small-img">
+                  <div class="slick-list">
+                    <div class="slick-track">
+                      <div class="single-small-img">
+                        <img img [src]="imageUrl+product.image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="ltn__shop-details-large-img">
+                  <div class="slick-list">
+                    <div class="slick-track">
+                      <div class="single-large-img">
+                        <a href="">
+                          <img [src]="imageUrl+product.image">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6">
+              <div class="information-detail">
+                <h3>{{product.name}}</h3>
+                <div class="price">
+                  <span>${{product.price}}</span>
+                  <span>
+                    <ul>
+                     <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                    </ul>
+                  </span>
+
+                </div>
+                <div class="modal-product-brief">
+                  <p>Decorate</p>
+                </div>
+                <div class="ltn__product-details-menu-2 ">
+                  <ul>
+                    <li>
+                      <form [formGroup]="addToCartForm" (ngSubmit)="onSubmit()">
+                        <input type="hidden" name="_token" value="omS4eWSHDSeO7W1wvXASizsUb1RRXwkoRiKyLUVb">
+                        <input class="cart-plus-minus-box" formControlName="Unit" type="number" min="1" name="quantity" value="1" required="" fdprocessedid="5cplx">
+                        <input type="hidden" name="id" value=" 20">
+                        <button type="submit" name="addToCart" class="theme-btn-1 " fdprocessedid="ybxvr">Add to cart
+                        </button>
+                      </form>
+
+                    </li>
+                    <li></li>
+                    <li style="margin-left: -50px">
+                      <form>
+                        <input type="hidden" name="_token" value="omS4eWSHDSeO7W1wvXASizsUb1RRXwkoRiKyLUVb">
+                        <input type="hidden" name="id" value=" 20">
+                        <button type="submit" name="addToWatchList" class=" btn-effect-1 " fdprocessedid="31xg4j">
+                          <i class="bi bi-heart"></i>
+                        </button>
+                      </form>
+
+                    </li>
+                  </ul>
+                </div>
+                <div class="ltn__social-media">
+                  <ul>
+                    <li class="share">Share:</li>
+                    <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                    <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                    <li><a href=""><i class="bi bi-pinterest"></i></a></li>
+                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                  </ul>
+                </div>
+                <div class="modal-product-meta">
+                  <ul>
+                    <li>SKU:</li>
+                    <li> 12345</li>
+                  </ul>
+                </div>
+                <div class="modal-product-meta1">
+                  <ul>
+                    <li>Categories:</li>
+                    <li><a href="">{{product.category}}</a></li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div class="ltn__shop-details-tab-area">
+  <div class="container boder1">
+  <div class="container-product">
+    <div class="row">
+      <div class="col-12">
+        <div class="box-product">
+          <div class="nav">
+      <div class="col product-tab" [class.product-tab-color]="id1 == 'add-info'" id="add-info" (click)="tabChange('add-info')">
+
+          <p>Description</p>
+
+
+      </div>
+      <div class="col product-tab" [class.product-tab-color]="id1 == 'bid-history'" id="bid-history" (click)="tabChange('bid-history')">
+        <p>Reviews</p>
+
+
+      </div>
+      <div class="col product-tab" [class.product-tab-color]="id1 == 'vendor-info'" id="vendor-info" (click)="tabChange('vendor-info')">
+          <p>Shipping</p>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="tab-content">
+        <div class="content-value" *ngIf="id1 == 'add-info'">
+         <p>Decorate</p>
+        </div>
+        <div class="content-value" *ngIf="id1 == 'bid-history'">
+          <div class="tab-pane">
+            <div class="ltn__shop-details-tab-content-inner">
+              <div class="customer-reviews-head  text-center">
+                <h4 class="title-2">
+                  Customer Reviews
+                </h4>
+<!--                <div class="product-ratting " >-->
+
+<!--                      <ul>-->
+<!--                        <li>-->
+<!--                          <a href="">-->
+<!--                            <i class="bi bi-star-fill"></i>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--                        <li><a href=""><i class="bi bi-star-fill"></i></a></li>-->
+<!--                        <li><a href=""><i class="bi bi-star-fill"></i></a></li>-->
+<!--                        <li><a href=""><i class="bi bi-star-half"></i></a></li>-->
+<!--                        <li><a href=""><i class="bi bi-star"></i></a></li>-->
+<!--                        <li class="review-total"><a href=""> ( 95 Reviews )</a></li>-->
+<!--                      </ul>-->
+
+<!--                </div>-->
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-7">
+                <div class="ltn__comment-area mb-30">
+                  <ul>
+                    <li>
+                      <div class="ltn__comment-item">
+                        <div class="ltn__commenter-img">
+                          <img src="assets/img/1.jpg">
+                        </div>
+                        <div class="ltn__commenter-comment">
+                          <h6><a href="">Adam Smit</a></h6>
+                          <div class="product-ratting " >
+                            <ul>
+                              <li>
+                                <a href="">
+                                  <i class="bi bi-star-fill"></i>
+                                </a>
+                              </li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-half"></i></a></li>
+                              <li><a href=""><i class="bi bi-star"></i></a></li>
+                            </ul>
+                          </div>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
+                          <span class="ltn__comment-reply-btn">September 3, 2020</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ltn__comment-item">
+                        <div class="ltn__commenter-img">
+                          <img src="assets/img/1.jpg">
+                        </div>
+                        <div class="ltn__commenter-comment">
+                          <h6><a href="">Adam Smit</a></h6>
+                          <div class="product-ratting " >
+                            <ul>
+                              <li>
+                                <a href="">
+                                  <i class="bi bi-star-fill"></i>
+                                </a>
+                              </li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-half"></i></a></li>
+                              <li><a href=""><i class="bi bi-star"></i></a></li>
+                            </ul>
+                          </div>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
+                          <span class="ltn__comment-reply-btn">September 3, 2020</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ltn__comment-item">
+                        <div class="ltn__commenter-img">
+                          <img src="assets/img/1.jpg">
+                        </div>
+                        <div class="ltn__commenter-comment">
+                          <h6><a href="">Adam Smit</a></h6>
+                          <div class="product-ratting " >
+                            <ul>
+                              <li>
+                                <a href="">
+                                  <i class="bi bi-star-fill"></i>
+                                </a>
+                              </li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                              <li><a href=""><i class="bi bi-star-half"></i></a></li>
+                              <li><a href=""><i class="bi bi-star"></i></a></li>
+                            </ul>
+                          </div>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
+                          <span class="ltn__comment-reply-btn">September 3, 2020</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="ltn__comment-reply-area">
+                  <form>
+                    <h2 class="title-3">
+                      Add a Review
+                    </h2>
+                    <div class="product-ratting " >
+                      <ul>
+                        <li class="ratings"><a href="">Your Ratings:</a></li>
+                        <li>
+                          <a href="">
+                            <i class="bi bi-star-fill"></i>
+                          </a>
+                        </li>
+                        <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                        <li><a href=""><i class="bi bi-star-fill"></i></a></li>
+                        <li><a href=""><i class="bi bi-star-half"></i></a></li>
+                        <li><a href=""><i class="bi bi-star"></i></a></li>
+                      </ul>
+                    </div>
+                    <div class="input-item">
+                      <textarea placeholder="Type your comments...."></textarea>
+                    </div>
+                    <div class="input-item">
+                      <input type="text" placeholder="Type your name...." fdprocessedid="y652jq">
+                    </div>
+
+                    <div class="input-item">
+                      <input type="email" placeholder="Type your email...." fdprocessedid="wnhadm">
+                    </div>
+                    <div class="input-item">
+                      <input type="text" name="website" placeholder="Type your website...." fdprocessedid="rcpfh">
+                    </div>
+                    <label class="check-box">
+                      <input type="checkbox" name="agree">
+                      Save my name, email, and website in this browser for the next time I comment.
+                    </label>
+                    <div class="btn-wrapper1">
+                      <button class="btn" type="submit">SUBMIT</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-value" *ngIf="id1 == 'vendor-info'">
+         <div class="container">
+           <div class="row">
+             <div class="12">
+               <div class="tab-3">
+                 <h4 class="title-4">
+                   Shipping policy for our store
+                 </h4>
+                 <div class="move-information">
+                 <ul>
+                   <li>
+                     1-2 business days (Typically by end of day)1-2 business days (Typically by end of day)
+                   </li>
+                   <li>
+                     30 days money back guaranty
+
+                   </li>
+                   <li>
+                     24/7 live support
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+
+             </div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+<section class="section-e5">
+  <div class="container">
+    <div class="row">
+      <div class="ltn__product-gutter">
+        <div class="top-product section-title-border">
+          <h1>Relate products</h1>
+        </div>
+        <div class="tab-conten">
+          <owl-carousel-o [options]="customOptionsProduct">
+            <ng-template carouselSlide  *ngFor="let p of products">
+              <div class="ltn__product-item">
+                <div class="product-img">
+                  <a routerLink= "/product/{{p.id}}">
+                    <div class="box-img">
+                    <img [src]="imageUrl+p.image">
+                    </div>
+                  </a>
+                  <div class="product-badge">
+                    <ul>
+                      <li class="badge-1">Hot</li>
+                    </ul>
+                  </div>
+                  <div class="product-hover-action">
+                    <ul>
+                      <li><a href=""><i class="bi bi-search"></i></a></li>
+                      <li><a href=""><i class="bi bi-handbag"></i></a></li>
+                      <li><a href=""><i class="bi bi-shuffle"></i></a></li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div class="produc-intro">
+                  <div class="product-ratting">
+                    <ul>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                      <li><a href=""><i class="bi bi-star"></i></a></li>
+                    </ul>
+                    <h2 class="product-title">
+                      <a routerLink="/product/{{p.id}}" class="product-link">{{p.name}}</a>
+                    </h2>
+                    <div class="product-price">
+                      <span>${{p.price}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <!--            <ng-template carouselSlide>-->
+            <!--              <div class="ltn__product-item">-->
+            <!--              <div class="product-img">-->
+            <!--                <a href="">-->
+            <!--                  <img src="assets/img/product10.png" alt="">-->
+            <!--                </a>-->
+            <!--                <div class="product-badge">-->
+            <!--                  <ul>-->
+            <!--                    <li class="badge-1">Hot</li>-->
+            <!--                  </ul>-->
+            <!--                </div>-->
+            <!--                <div class="product-hover-action">-->
+            <!--                  <ul>-->
+            <!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+            <!--                  </ul>-->
+
+            <!--                </div>-->
+
+            <!--              </div>-->
+            <!--                <div class="produc-intro">-->
+            <!--                  <div class="product-ratting">-->
+            <!--                    <ul>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    </ul>-->
+            <!--                    <h2 class="product-title">-->
+            <!--                      <a href="">Pink Flower Tree</a>-->
+            <!--                    </h2>-->
+            <!--                    <div class="product-price">-->
+            <!--                      <span>$18.00</span>-->
+            <!--                      <del>$21.00</del>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            </ng-template>-->
+            <!--            <ng-template carouselSlide>-->
+            <!--              <div class="ltn__product-item">-->
+            <!--              <div class="product-img">-->
+            <!--                <a href="">-->
+            <!--                  <img src="assets/img/product12.png" alt="">-->
+            <!--                </a>-->
+            <!--                <div class="product-badge">-->
+            <!--                  <ul>-->
+            <!--                    <li badge-1>Hot</li>-->
+            <!--                  </ul>-->
+            <!--                </div>-->
+            <!--                <div class="product-hover-action">-->
+            <!--                  <ul>-->
+            <!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+            <!--                  </ul>-->
+
+            <!--                </div>-->
+
+            <!--              </div>-->
+            <!--                <div class="produc-intro">-->
+            <!--                  <div class="product-ratting">-->
+            <!--                    <ul>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                      <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    </ul>-->
+            <!--                    <h2 class="product-title">-->
+            <!--                      <a href="">Pink Flower Tree</a>-->
+            <!--                    </h2>-->
+            <!--                    <div class="product-price">-->
+            <!--                      <span>$18.00</span>-->
+            <!--                      <del>$21.00</del>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            </ng-template>-->
+            <!--            <ng-template carouselSlide>-->
+            <!--              <div class="ltn__product-item">-->
+            <!--              <div class="product-img">-->
+            <!--                <a href="">-->
+            <!--                  <img src="assets/img/product6.png" alt="">-->
+            <!--                </a>-->
+            <!--                <div class="product-badge">-->
+            <!--                  <ul>-->
+            <!--                    <li class="badge-2">Hot</li>-->
+            <!--                  </ul>-->
+            <!--                </div>-->
+            <!--                <div class="product-hover-action">-->
+            <!--                  <ul>-->
+            <!--                    <li><a href=""><i class="bi bi-search"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-handbag"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-shuffle"></i></a></li>-->
+            <!--                  </ul>-->
+
+            <!--                </div>-->
+
+            <!--              </div>-->
+            <!--              <div class="produc-intro">-->
+            <!--                <div class="product-ratting">-->
+            <!--                  <ul>-->
+            <!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                    <li><a href=""><i class="bi bi-star"></i></a></li>-->
+            <!--                  </ul>-->
+            <!--                  <h2 class="product-title">-->
+            <!--                    <a href="">Pink Flower Tree</a>-->
+            <!--                  </h2>-->
+            <!--                  <div class="product-price">-->
+            <!--                    <span>$18.00</span>-->
+            <!--                    <del>$21.00</del>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            </ng-template>-->
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

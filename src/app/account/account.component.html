@@ -1,0 +1,137 @@
+<app-nav></app-nav>
+<section class="section-cart">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="head-cart">
+          <h1>
+            My Account
+          </h1>
+          <div class="menu-cart">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li>
+                >
+              </li>
+              <li>My Account</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-account">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="box-product">
+          <div class="nav-box">
+                <div class="col product-tab1" [class.product-tab-color]="id1 == 'add-info'" id="add-info" (click)="tabChange('add-info')">
+                  <p>Description</p>
+                </div>
+                <div class="col product-tab1" [class.product-tab-color]="id1 == 'bid-history'" id="bid-history" (click)="tabChange('bid-history')">
+                  <p>Orders </p>
+                </div>
+
+
+                <div class="col product-tab1" [class.product-tab-color]="id1 == 'vendor-info'" id="vendor-info" (click)="tabChange('vendor-info')">
+                  <p>Account Details </p>
+                </div>
+
+
+                <div class="col product-tab1" [class.product-tab-color]="id1 == 'log-out'" id="log-out" (click)="tabChange('vendor-info')">
+                 <p><a *ngIf="role === 'User'" (click)="logout()">Log Out</a></p>
+                </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content">
+          <div class="content-value" *ngIf="id1 == 'add-info'">
+            <p>Hello
+              <strong>Dat</strong>
+            </p>
+
+            <p class="form">From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.
+            </p>
+          </div>
+          <div class="content-value" *ngIf="id1 == 'bid-history'">
+            <div class="ltn__myaccount-tab-content-inner">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                  </tr>
+
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>13</td>
+                    <td>2023-09-20 04:40:49</td>
+                    <td>Pending</td>
+                    <td>$36</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="content-value" *ngIf="id1 == 'vendor-info'">
+            <div class="ltn__myaccount-tab-content-inner">
+              <p>The following addresses will be used on the checkout page by default.</p>
+              <div class="ltn__form-box">
+                <form>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="box-username">
+                        <label>User Name:</label>
+                        <input type="text" name="name" value="Đạt">
+                      </div>
+
+                    </div>
+                    <div class="col-6">
+                      <div class="box-username">
+                      <label> Email:</label>
+                      <input type="email" name="email" value="dattt1104@gmail.com">
+                      </div>
+
+                    </div>
+                  </div>
+                  <fieldset>
+                    <legend>Password change</legend>
+                    <div class="row">
+                      <div class="col-12">
+                        <label>Current password (leave blank to leave unchanged):</label>
+                        <input type="password" name="password">
+                        <label>New password (leave blank to leave unchanged):</label>
+                        <input type="password" name="newPassword">
+                        <label>Confirm new password:</label>
+                        <input type="password" name="newPassword_confirmation">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="btn-wrapper">
+                    <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Save Changes</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

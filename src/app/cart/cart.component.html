@@ -1,0 +1,131 @@
+<app-nav></app-nav>
+<section class="section-cart">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="head-cart">
+          <h1>
+            Cart
+          </h1>
+          <div class="menu-cart">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li>
+                >
+                </li>
+              <li>Cart</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-shopping-cart">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="shoping-cart-inner">
+          <div class="shoping-cart-table">
+            <table class="table">
+              <thead>
+              <tr class="">
+                <th class="cart-product-remove">Remove</th>
+                <th class="cart-product-image">Image</th>
+                <th class="" style="display: none">Id</th>
+                <th class="cart-product-info">Name</th>
+                <th class="cart-product-price">Price</th>
+                <th class="cart-product-quantity">Subtotal </th>
+                <th class="cart-product-subtotal">Quantity</th>
+                <th class="cart-product-subtotal">Acction</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let p of carts" class="product-row">
+
+                <td class="cart-product-remove" (click)="delete(p.cartId)">
+                  x
+                </td>
+                <td class="cart-product-image">
+                  <a href="">
+
+                    <a routerLink="/product/{{p.productId}}"><img [src]="imageUrl+p.image"></a>
+                  </a>
+                </td>
+                <td class="cart-product-info">
+               <p> <a routerLink="/product/{{p.productId}}">{{p.name}}</a></p>
+
+
+
+                </td>
+                <td class="cart-product-id" style="display: none">
+                  <p>{{p.cartId}}</p>
+                </td>
+                <td class="cart-product-price">
+                  <p>{{p.price}}</p>
+                </td>
+                <td class="cart-product-price">
+                 <p>{{p.subtotal}}</p>
+                </td>
+                <td class="cart-product-quantity">
+                  <input id="{{p.cartId}}" type="number"  formControlName="quanity" name="quantity" class="cart-quantity-input cart-plus-minus-box" fdprocessedid="ppewg" >
+
+                <td class="update">
+
+              </tr>
+              </tbody>
+
+            </table>
+            <form style="display: flex" [formGroup]="updateForm" (ngSubmit)="onSubmit()" >
+              <input type="hidden" name="_token" value="liOuIoSajeznjG3C7eNLi4XMpEcQ4mFhwIXsdT28">
+              <div class="">
+
+
+                <button type="button" class="update-btn" style="padding: 5px">Update All</button>
+              </div>
+              <input class="display: none" type="hidden" name="id" value="60">
+
+            </form>
+          </div>
+          <div class="shoping-cart-total">
+            <h4>Cart Totals</h4>
+            <table class="table">
+              <tbody>
+              <tr>
+                <td>Cart Subtotal</td>
+                <td>${{total}}</td>
+              </tr>
+              <tr>
+                <td>Shipping and Handing</td>
+                <td>$15.00</td>
+              </tr>
+              <tr>
+                <td>Vat</td>
+                <td>$00.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Order Total</strong>
+                </td>
+                <td>
+                    <strong>${{ordertotal}}</strong>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+            <div  class="btn-wrapper" routerLink="/checkout">
+
+             Proceed to checkout
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
